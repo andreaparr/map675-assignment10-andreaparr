@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>New Mexico Features</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.css' rel='stylesheet' />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      #map {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+      }
+    </style>
+</head>
+<body>
+  <div id='map'></div>
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiYW5kcmVhcnBhcnIiLCJhIjoiY2o2NGJrODB0MG0weTJxbnp1M2h2cWppdyJ9.O4620rmp32gJntwavWnlaQ';
+    var map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/mapbox/dark-v9',
+      center: [-105.87, 34.52],
+      zoom: 6
+    });
+
+   map.on('load', function(){
+
+     map.addSource('gnisman', {
+       type: 'geojson',
+       data: 'data/gnisman.geojson'
+     });
+    
+     map.addLayer({
+        id: 'gnisman',
+        type: 'heatmap',
+        source: 'gnisman',
+        maxzoom: 15,
+        paint: {
+          // increase weight as diameter breast height increases
+          'heatmap-weight': {
+            property: 'ELEV_IN_FT',
+            type: 'exponential',
+            stops: [
+              [2000, 0],
+              [12000, 1]
+            ]
+          },
+          // increase intensity as zoom level increases
+          'heatmap-intensity': {
+            stops: [
+              [11, 1],
+              [15, 3]
+            ]
+          },
+          // assign color values be applied to points depending on their density
+          'heatmap-color': [
+            'interpolate',
+            ['linear'],
+            ['heatmap-density'],
+            0, 'rgba(236,222,239,0)',
+            0.2, 'rgb(208,209,230)',
+            0.4, 'rgb(166,189,219)',
+            0.6, 'rgb(103,169,207)',
+            0.8, 'rgb(28,144,153)'
+          ],
+          // increase radius as zoom increases
+          'heatmap-radius': {
+            stops: [
+              [6, 12],
+              [12, 20]
+            ]
+          },
+          // decrease opacity to transition into the circle layer
+          'heatmap-opacity': {
+            default: 1,
+            stops: [
+              [14, 1],
+              [15, 0]
+            ]
+          },
+        }
+      }, 'waterway-label');
+
+     map.addLayer({
+        id: 'gnisman-point',
+        type: 'circle',
+        source: 'gnisman',
+        minzoom: 14,
+        paint: {
+          // increase the radius of the circle as the zoom level and elevation value increases
+          'circle-radius': {
+            property: 'ELEV_IN_FT',
+            type: 'exponential',
+            stops: [
+              [{ zoom: 15, value: 2000 }, 5],
+              [{ zoom: 15, value: 12000 }, 10],
+              [{ zoom: 22, value: 2000 }, 20],
+              [{ zoom: 22, value: 12000 }, 50],
+            ]
+          },
+          'circle-color': {
+            property: 'ELEV_IN_FT',
+            type: 'exponential',
+            stops: [
+              [2000, 'rgba(236,222,239,0)'],
+              [3500, 'rgb(236,222,239)'],
+              [5000, 'rgb(208,209,230)'],
+              [6500, 'rgb(166,189,219)'],
+              [8000, 'rgb(103,169,207)'],
+              [9500, 'rgb(28,144,153)'],
+              [12000, 'rgb(1,108,89)']
+            ]
+          },
+          'circle-stroke-color': 'white',
+          'circle-stroke-width': 1,
+          'circle-opacity': {
+            stops: [
+              [14, 0],
+              [15, 1]
+            ]
+          }
+        }
+      }, 'waterway-label');
+   })
+
+   map.on('click', 'gnisman-point', function(e) {
+  new mapboxgl.Popup()
+    .setLngLat(e.features[0].geometry.coordinates)
+    .setHTML('<b>Name</b> ' + e.features[0].properties.FEATURE_NA + 
+    '<br>' + '<b>Elevation</b> ' + e.features[0].properties.ELEV_IN_FT + ' ft')
+    .addTo(map);
+});
+
+  </script>
+</body>
+</html>
