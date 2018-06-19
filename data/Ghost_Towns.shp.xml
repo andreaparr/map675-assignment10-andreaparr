@@ -1,0 +1,410 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<metadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="http://www.fgdc.gov/metadata/fgdc-std-001-1998.xsd">
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <origin>UNM Earth Data Analysis Center.</origin>
+        <pubdate>2014</pubdate>
+        <title>2014 New Mexico Ghost Towns</title>
+        <geoform>vector digital data</geoform>
+      </citeinfo>
+    </citation>
+    <descript>
+      <abstract>This data provides locations and non-spatial attributes of many ghost towns in the State of New Mexico, compiled from various sources. Locations
+        provided with varying degrees of accuracy.</abstract>
+      <purpose>This data set is intended to provide the general locations and conditions of ghost
+        towns within the State of New Mexico. Locations are provided with varying degrees of
+        accuracy, and should not be used for navigation. It is wise to consult with a local before
+        attempting to visit any of these places.</purpose>
+      <supplinf>There are 241 ghost towns that have unknown coordinates.  These were omitted from this file.</supplinf>
+    </descript>
+    <timeperd>
+      <timeinfo>
+        <sngdate>
+          <caldate>2014</caldate>
+        </sngdate>
+      </timeinfo>
+      <current>publication date</current>
+    </timeperd>
+    <status>
+      <progress>Complete</progress>
+      <update>As needed</update>
+    </status>
+    <spdom>
+      <bounding>
+        <westbc>-108.989501</westbc>
+        <eastbc>-103.090780</eastbc>
+        <northbc>36.988889</northbc>
+        <southbc>31.334274</southbc>
+      </bounding>
+    </spdom>
+    <keywords>
+      <theme>
+        <themekt>ISO 19115 Topic Categories</themekt>
+        <themekey>society</themekey>
+      </theme>
+      <theme>
+        <themekt>None</themekt>
+        <themekey>Ghost towns</themekey>
+        <themekey>New Mexico</themekey>
+        <themekey>History</themekey>
+        <themekey>Archaeology</themekey>
+        <themekey>1800</themekey>
+        <themekey>1900</themekey>
+        <themekey>Mining</themekey>
+        <themekey>Ranching</themekey>
+        <themekey>Tourism</themekey>
+      </theme>
+    </keywords>
+    <accconst>None</accconst>
+    <useconst>Not to be used for navigation</useconst>
+    <datacred>UNM EDAC</datacred>
+    <native>Microsoft Windows 7 Version 6.1 (Build 7601) Service Pack 1; Esri ArcGIS
+      10.1.0.3035</native>
+  </idinfo>
+  <dataqual>
+    <attracc>
+      <attraccr>To the best of this analyst's knowledge, all records in the set are correct with regard to location and attributes. Information was gathered from official sources representing the business or organization, and digital orthophotography.</attraccr>
+    </attracc>
+    <logic>Unknown</logic>
+    <complete>Unknown. Thorough and comprehensive research was performed, though omissions may exist.</complete>
+    <posacc>
+      <horizpa>
+        <horizpar>Unknown</horizpar>
+      </horizpa>
+    </posacc>
+    <lineage>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>US Board on Geographic Names, GNIS data</origin>
+            <pubdate>Unknown</pubdate>
+            <title>Unknown</title>
+            <geoform>vector digital data</geoform>
+            <pubinfo>
+              <pubplace>http://geonames.usgs.gov/</pubplace>
+              <publish>US Board on Geographic Names</publish>
+            </pubinfo>
+          </citeinfo>
+        </srccite>
+        <typesrc>Unknown</typesrc>
+        <srctime>
+          <timeinfo>
+            <rngdates>
+              <begdate>Unknown</begdate>
+              <enddate>Unknown</enddate>
+            </rngdates>
+          </timeinfo>
+          <srccurr>Unknown</srccurr>
+        </srctime>
+        <srccitea>Unknown</srccitea>
+        <srccontr>Unknown</srccontr>
+      </srcinfo>
+      <srcinfo>  
+      <srccite>
+         <citeinfo>
+            <origin>Todd Underwood, Boris Vasilev</origin>
+            <pubdate>2013</pubdate>
+            <title>Ghost Towns</title>
+            <geoform>web page</geoform>
+            <pubinfo>
+              <pubplace>http://www.ghosttowns.com/</pubplace>
+              <publish>Atjeu Publishing</publish>
+            </pubinfo>
+          </citeinfo>
+      </srccite>
+        <typesrc>Unknown</typesrc>
+        <srctime>
+          <timeinfo>
+            <rngdates>
+              <begdate>Unknown</begdate>
+              <enddate>Unknown</enddate>
+            </rngdates>
+          </timeinfo>
+          <srccurr>Unknown</srccurr>
+        </srctime>
+        <srccitea>Ghost Towns</srccitea>
+        <srccontr>Unknown</srccontr>
+      </srcinfo>
+      <srcinfo>  
+        <srccite>
+          <citeinfo>
+            <origin>James E. and Barbara H. Sherman.</origin>
+            <pubdate>1975</pubdate>
+            <title>Ghost Towns and Mining Camps of New Mexico</title>
+            <geoform>map</geoform>
+            <pubinfo>
+              <pubplace>Unknown</pubplace>
+              <publish>University of Oklahoma Press</publish>
+            </pubinfo>
+          </citeinfo>
+        </srccite>
+        <typesrc>Unknown</typesrc>
+        <srctime>
+          <timeinfo>
+            <rngdates>
+              <begdate>Unknown</begdate>
+              <enddate>Unknown</enddate>
+            </rngdates>
+          </timeinfo>
+          <srccurr>Unknown</srccurr>
+        </srctime>
+        <srccitea>Ghost Towns and Mining Camps of New Mexico</srccitea>
+        <srccontr>Unknown</srccontr>
+      </srcinfo>
+      <procstep>
+        <procdesc>The New Mexico data was downloaded from the GNIS website. Historical places were selected, and imported into a spreadsheet. GNIS names and locations were validated against historical maps, descriptions, and aerial imagery.</procdesc>
+        <procdate>20140110</procdate>
+        <proccont>
+          <cntinfo>
+            <cntorgp>
+              <cntorg>Earth Data Analysis Center</cntorg>
+            </cntorgp>
+            <cntpos>Clearinghouse Manager</cntpos>
+            <cntaddr>
+              <addrtype>mailing address</addrtype>
+              <address>MSC01 1110</address>
+              <address>1 University of New Mexico</address>
+              <city>Albuquerque</city>
+              <state>NM</state>
+              <postal>87131-0001</postal>
+              <country>USA</country>
+            </cntaddr>
+            <cntvoice>505-277-3622</cntvoice>
+            <cntfax>505-277-3614</cntfax>
+            <cntemail>clearinghouse@edac.unm.edu</cntemail>
+            <hours>8AM - 5PM Mountain Time</hours>
+          </cntinfo>
+        </proccont>
+      </procstep>
+    </lineage>
+  </dataqual>
+  <spdoinfo>
+    <direct>Vector</direct>
+    <ptvctinf>
+      <sdtsterm>
+        <sdtstype>Entity point</sdtstype>
+        <ptvctcnt>265</ptvctcnt>
+      </sdtsterm>
+    </ptvctinf>
+  </spdoinfo>
+  <spref>
+    <horizsys>
+      <geograph>
+        <latres>8.9831528411952133e-009</latres>
+        <longres>8.9831528411952133e-009</longres>
+        <geogunit>Decimal degrees</geogunit>
+      </geograph>
+      <geodetic>
+        <horizdn>D North American 1983</horizdn>
+        <ellips>GRS 1980</ellips>
+        <semiaxis>6378137.0</semiaxis>
+        <denflat>298.257222101</denflat>
+      </geodetic>
+    </horizsys>
+  </spref>
+  <eainfo>
+    <detailed>
+      <enttyp>
+        <enttypl>Ghost_Towns_01062014</enttypl>
+        <enttypd>General locations of ghost towns</enttypd>
+        <enttypds>User defined</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>FID</attrlabl>
+        <attrdef>Internal feature number.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Shape</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>NAME</attrlabl>
+        <attrdef>Ghost Town name</attrdef>
+        <attrdefs>EDAC</attrdefs>
+        <attrdomv>
+          <udom>Place names given to ghost towns. May be different from official GNIS name.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>YEAR_ABAND</attrlabl>
+        <attrdef>Year town was abandoned</attrdef>
+        <attrdefs>EDAC</attrdefs>
+        <attrdomv>
+          <udom>Year that town was abandoned, YYYY format. Usually based on date that the town's post office closed.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>CONDITION</attrlabl>
+        <attrdef>Condition of structures in the ghost town</attrdef>
+        <attrdefs>EDAC</attrdefs>
+        <attrdomv>
+          <udom>In order of level of preservation (most preserved to least preserved): Historic, Semi-abandoned, Abandoned, Neglected, Barren.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>FEATURE_ID</attrlabl>
+        <attrdef>GNIS Unique Identifier</attrdef>
+        <attrdefs>GNIS</attrdefs>
+        <attrdomv>
+          <udom>Key to connect record to GNIS place name and data</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>STATE_ALPH</attrlabl>
+        <attrdef>State initials</attrdef>
+        <attrdefs>GNIS</attrdefs>
+        <attrdomv>
+          <udom>Two letter state code</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>STATE_NUME</attrlabl>
+        <attrdef>State number</attrdef>
+        <attrdefs>GNIS</attrdefs>
+        <attrdomv>
+          <udom>State FIPS code</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>COUNTY_NAM</attrlabl>
+        <attrdef>County Name</attrdef>
+        <attrdefs>GNIS and EDAC</attrdefs>
+        <attrdomv>
+          <udom>Name of the county in which ghost town is located</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>COUNTY_NUM</attrlabl>
+        <attrdef>County code</attrdef>
+        <attrdefs>GNIS and EDAC</attrdefs>
+        <attrdomv>
+          <udom>County FIPS code</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PRIM_LAT_D</attrlabl>
+        <attrdef>Latitude</attrdef>
+        <attrdefs>EDAC</attrdefs>
+        <attrdomv>
+          <udom>Latitude in decimal degrees</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PRIM_LONG_</attrlabl>
+        <attrdef>Longitude</attrdef>
+        <attrdefs>EDAC</attrdefs>
+        <attrdomv>
+          <udom>Longitude in decimal degrees</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>ELEV_IN_M</attrlabl>
+        <attrdef>Elevation</attrdef>
+        <attrdefs>GNIS</attrdefs>
+        <attrdomv>
+          <udom>Elevation in meters</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>ELEV_IN_FT</attrlabl>
+        <attrdef>Elevation</attrdef>
+        <attrdefs>GNIS</attrdefs>
+        <attrdomv>
+          <udom>Elevation in feet</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>CURRENT_GE</attrlabl>
+        <attrdef>Correct geometry</attrdef>
+        <attrdefs>EDAC</attrdefs>
+        <attrdomv>
+          <udom>Correct geometry</udom>
+        </attrdomv>
+      </attr>
+    </detailed>
+  </eainfo>
+  <distinfo>
+    <distrib>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>Earth Data Analysis Center</cntorg>
+        </cntorgp>
+        <cntpos>Clearinghouse Manager</cntpos>
+        <cntaddr>
+          <addrtype>mailing and physical address</addrtype>
+          <address>MSC01 1110</address>
+          <address>1 University of New Mexico</address>
+          <city>Albuquerque</city>
+          <state>NM</state>
+          <postal>87131-0001</postal>
+          <country>USA</country>
+        </cntaddr>
+        <cntvoice>505-277-3622 ext. 230</cntvoice>
+        <cntfax>505-277-3614</cntfax>
+        <cntemail>clearinghouse@edac.unm.edu</cntemail>
+        <hours>0800 - 1700 MT, M-F -7 hours GMT</hours>
+      </cntinfo>
+    </distrib>
+    <resdesc>Downloadable Data</resdesc>
+    <distliab>The material on this site is made available as a public service. Maps and data are to be used for reference purposes only and the Earth Data Analysis Center (EDAC), Resource Geographic Information System (RGIS) and The University of New Mexico are not responsible for any inaccuracies herein contained. No responsibility is assumed for damages or other liabilities due to the accuracy, availability, use or misuse of the information herein provided. Unless otherwise indicated in the documentation (metadata) for individual data sets, information on this site is public domain and may be copied without permission; citation of the source is appreciated.</distliab>
+    <stdorder>
+      <digform>
+        <digtinfo>
+          <formname>ZIP</formname>
+          <transize>4</transize>
+        </digtinfo>
+        <digtopt>
+          <onlinopt>
+            <computer>
+              <networka>
+                <networkr>http://rgis.unm.edu</networkr>
+              </networka>
+            </computer>
+            <accinstr>Download from Resource Geographic Information System (RGIS) at http://rgis.unm.edu.</accinstr>
+          </onlinopt>
+        </digtopt>
+      </digform>
+      <fees>None. The files are available to download from Resource Geographic Information System (RGIS) (http://rgis.unm.edu).</fees>
+      <ordering>Contact Earth Data Analysis Center at clearinghouse@edac.unm.edu</ordering>
+    </stdorder>
+    <custom>Contact Earth Data Analysis Center at clearinghouse@edac.unm.edu</custom>
+    <techpreq>Adequate computer capability is the only technical prerequisite for viewing data in digital form.</techpreq>
+  </distinfo>
+  <metainfo>
+    <metd>20140107</metd>
+    <metc>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>Earth Data Analysis Center</cntorg>
+        </cntorgp>
+        <cntpos>Clearinghouse Manager</cntpos>
+        <cntaddr>
+          <addrtype>mailing and physical address</addrtype>
+          <address>MSC01 1110</address>
+          <address>1 University of New Mexico</address>
+          <city>Albuquerque</city>
+          <state>NM</state>
+          <postal>87131-0001</postal>
+          <country>USA</country>
+        </cntaddr>
+        <cntvoice>505-277-3622 ext. 230</cntvoice>
+        <cntfax>505-277-3614</cntfax>
+        <cntemail>clearinghouse@edac.unm.edu</cntemail>
+        <hours>0800 - 1700 MT, M-F -7 hours GMT</hours>
+      </cntinfo>
+    </metc>
+    <metstdn>FGDC Content Standards for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001-1998</metstdv>
+    <mettc>local time</mettc>
+  </metainfo>
+</metadata>
