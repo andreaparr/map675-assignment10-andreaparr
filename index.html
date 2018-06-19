@@ -94,17 +94,17 @@
           id: 'ghosttown-point',
           type: 'circle',
           source: 'ghosttown',
-          minzoom: 8,
+          minzoom: 7,
           paint: {
             // increase the radius of the circle as the zoom level and elevation value increases
             'circle-radius': {
               property: 'ELEV_IN_FT',
               type: 'exponential',
               stops: [
-                [{ zoom: 10, value: 0 }, 5],
-                [{ zoom: 10, value: 12000 }, 10],
-                [{ zoom: 22, value: 0 }, 20],
-                [{ zoom: 22, value: 12000 }, 50],
+                [{ zoom: 7, value: 0 }, 5],
+                [{ zoom: 7, value: 12000 }, 10],
+                [{ zoom: 15, value: 0 }, 20],
+                [{ zoom: 15, value: 12000 }, 50],
               ]
             },
             'circle-color': {
@@ -112,12 +112,12 @@
               type: 'exponential',
               stops: [
                 [0, 'rgba(236,222,239,0)'],
-                [2500, 'rgb(236,222,239)'],
-                [5000, 'rgb(208,209,230)'],
-                [6500, 'rgb(166,189,219)'],
-                [8000, 'rgb(103,169,207)'],
-                [9500, 'rgb(28,144,153)'],
-                [11000, 'rgb(1,108,89)']
+                [2000, 'rgb(236,222,239)'],
+                [3500, 'rgb(208,209,230)'],
+                [5000, 'rgb(166,189,219)'],
+                [6500, 'rgb(103,169,207)'],
+                [8000, 'rgb(28,144,153)'],
+                [12000, 'rgb(1,108,89)']
               ]
             },
             'circle-stroke-color': 'white',
