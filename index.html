@@ -6,6 +6,7 @@
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.css' rel='stylesheet' />
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Open+Sans" rel="stylesheet">
     <style>
       body {
         margin: 0;
@@ -18,9 +19,43 @@
         bottom: 0;
         width: 100%;
       }
+
+      header {
+        padding: 6px 10%;
+        font-size: 1em;
+        color:whitesmoke;
+        font-family: 'Amatic SC', cursive;
+      }
+
+      h1 {
+        position: absolute;
+        z-index: 100;
+        top: 30px;
+        left: 50px;
+        padding: 8px 15px;
+        margin: 0;
+        color: #d4ac0d;
+        font-size: 2.5em;
+        background: rgba(25, 25, 25, 0.5);
+        border-radius: 5px;
+      }
+
+      .mapboxgl-popup-content {
+        color:whitesmoke;
+        background-color: rgba(25, 25, 25, 0.75);
+        border:0;
+        font-family: 'Open Sans', sans-serif;
+      }
+
     </style>
 </head>
+
 <body>
+
+  <header>
+    <h1>New Mexican Ghost Towns</h1>
+  </header>
+
   <div id='map'></div>
   <script>
     mapboxgl.accessToken = 'pk.eyJ1IjoiYW5kcmVhcnBhcnIiLCJhIjoiY2o2NGJrODB0MG0weTJxbnp1M2h2cWppdyJ9.O4620rmp32gJntwavWnlaQ';
@@ -90,6 +125,7 @@
           },
         }
       })
+
    map.addLayer({
           id: 'ghosttown-point',
           type: 'circle',
@@ -132,7 +168,8 @@
         });
      })
   
-     map.on('click', 'ghosttown-point', function(e) {
+
+  map.on('click', 'ghosttown-point', function(e) {
     new mapboxgl.Popup()
       .setLngLat(e.features[0].geometry.coordinates)
       .setHTML('<b>Name: </b>' + e.features[0].properties.NAME + 
@@ -140,6 +177,16 @@
       '<br>' + '<b>Elevation: </b>' + e.features[0].properties.ELEV_IN_FT + ' ft')
       .addTo(map);
    });
+
+    // Change the cursor to a pointer when the mouse is over the places layer.
+    map.on('mouseenter', 'ghosttown-point', function () {
+        map.getCanvas().style.cursor = 'pointer';
+    });
+
+    // Change it back to a pointer when it leaves.
+    map.on('mouseleave', 'ghosttown-point', function () {
+        map.getCanvas().style.cursor = '';
+    });
 
   </script>
 </body>
